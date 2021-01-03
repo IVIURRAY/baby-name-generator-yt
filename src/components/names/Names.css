@@ -1,0 +1,9 @@
+.names {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  font-size: 30px;
+  margin: 0px 4px;
+}
