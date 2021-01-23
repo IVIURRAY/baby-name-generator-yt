@@ -1,0 +1,15 @@
+.namesContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.firstname {
+  margin-right: 5px;
+}
+
+.surname {
+  margin-left: 5spx;
+}
