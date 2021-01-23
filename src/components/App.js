@@ -1,3 +1,6 @@
+import Emoji from 'react-emoji-render';
+import NameContainer from '../containers/NameContainer';
+import ButtonContainer from '../containers/ButtonContainer';
 import './App.css';
 import Emoji from 'react-emoji-render';
 import Names from './names'
@@ -7,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <Emoji text=":baby: Name Generator :baby:" />
-      <Names />
+      <NameContainer />
+      <ButtonContainer />
     </div>
   );
 }

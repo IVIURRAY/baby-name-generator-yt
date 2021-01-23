@@ -1,12 +1,13 @@
 import React from 'react'
-
 import './Names.css';
 
-function Names () {
+function Names (props) {
+  const {forename, surname} = props;
+
   return (
-    <section className="names">
-      <section className="name">Forename</section>
-      <section className="name">Surename</section>
+    <section className="namesContainer">
+      <section className="firstname">{forename}</section>
+      <section className="surname">{surname}</section>
     </section>
   )
 }

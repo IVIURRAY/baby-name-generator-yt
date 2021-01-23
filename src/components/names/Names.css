@@ -1,9 +1,16 @@
-.names {
+.namesContainer {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  font-size: x-large;
 }
 
-.name {
-  font-size: 30px;
-  margin: 0px 4px;
+.firstname {
+  margin-right: 5px;
+}
+
+.surname {
+  margin-left: 5spx;
+
 }
