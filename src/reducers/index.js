@@ -1,5 +1,13 @@
 import { combineReducers } from 'redux';
 
+const historicNames = (state = [], action) => {
+  if (action.type === "ADD_HISTORIC_NAME") {
+    return [action.payload].concat(state).slice(0, 5);
+  }
+
+  return state;
+}
+
 const initState = {
   forename: 'Haydn',
   surname: 'SWE'
@@ -31,6 +39,7 @@ const filtersReducer = (state=filtersInitState, action) => {
 }
 
 export default combineReducers({
+  history: historicNames,
   currentName: currentNameReducer,
   filters: filtersReducer,
 })

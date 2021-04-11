@@ -1,3 +1,7 @@
+const addHistoricName = payload => {
+  return { type: 'ADD_HISTORIC_NAME', payload }
+}
+
 const setCurrentForename = payload => {
   return {type: 'SET_CURRENT_FORENAME', payload}
 }
@@ -16,6 +20,7 @@ const setFilterFirstNameChar = payload => {
 
 
 export {
+  addHistoricName,
   setCurrentForename,
   setCurrentSurname,
   setFilterGender,

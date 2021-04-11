@@ -9,13 +9,15 @@ function Buttons (props) {
 
   const {
     firstCharFilter, isBoyFilter, setCurrentForename, 
-    setCurrentSurname, setFirstNameFilter, setGenderFilter
+    setCurrentSurname, setFirstNameFilter, setGenderFilter,
+    addHistoricName, currentName
   } = props;
 
   const handleBabyNameChange = () => {
     const newName = BabyNameGenerator(isBoyFilter === 'BOY', firstCharFilter);
     console.log(newName);
     setCurrentForename(newName);
+    addHistoricName({ forname: newName, surname: currentName.surname})
   }
 
   return (
