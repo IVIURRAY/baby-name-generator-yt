@@ -3,7 +3,7 @@ import { List, Button } from 'antd';
 import { HeartOutlined } from '@ant-design/icons'
 
 function HistoricNames(props) {
-  const { names } = props;
+  const { names, addToFavs } = props;
   return (
     <List
       itemLayout="horizontal"
@@ -16,6 +16,7 @@ function HistoricNames(props) {
               type="normal"
               shape="round"
               icon={<HeartOutlined />}
+              onClick={() => addToFavs({ forname: name.forname, surname: name.surname})}
             />]}
         >
           <List.Item.Meta

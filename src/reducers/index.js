@@ -8,6 +8,14 @@ const historicNames = (state = [], action) => {
   return state;
 }
 
+const favouritesReducer = (state = [], action) => {
+  if (action.type === "ADD_FAV_NAME") {
+    return state.concat(action.payload);
+  }
+
+  return state;
+}
+
 const initState = {
   forename: 'Haydn',
   surname: 'SWE'
@@ -40,6 +48,7 @@ const filtersReducer = (state=filtersInitState, action) => {
 
 export default combineReducers({
   history: historicNames,
+  favourites: favouritesReducer,
   currentName: currentNameReducer,
   filters: filtersReducer,
 })

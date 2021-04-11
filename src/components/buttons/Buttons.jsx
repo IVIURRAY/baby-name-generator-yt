@@ -10,7 +10,7 @@ function Buttons (props) {
   const {
     firstCharFilter, isBoyFilter, setCurrentForename, 
     setCurrentSurname, setFirstNameFilter, setGenderFilter,
-    addHistoricName, currentName
+    addHistoricName, currentName, addToFavs
   } = props;
 
   const handleBabyNameChange = () => {
@@ -26,6 +26,7 @@ function Buttons (props) {
         <Button
           shape="round"
           style={{borderColor: 'red', color: 'red'}}
+          onClick={() => addToFavs({forname: currentName.forename, surname: currentName.surname})}
           >
             Add to Favourites
         </Button>
